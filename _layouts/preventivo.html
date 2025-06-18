@@ -1,0 +1,197 @@
+---
+layout: default
+---
+
+<div
+  class="relative flex size-full min-h-auto flex-col bg-white justify-between group/design-root overflow-x-hidden"
+  style="font-family: 'Work Sans', 'Noto Sans', sans-serif; 
+  background-image: url('images/edilizia-bg.jpg'); 
+  background-size: cover; 
+  background-position: center;">
+
+  <div class="bg-white bg-opacity-90">
+    
+    <p class="p-6">
+      Gentile Cliente,<br>
+      la ringraziamo per l’interesse dimostrato nei confronti della nostra impresa edile. Da oltre 20 anni operiamo nel settore con serietà, puntualità e attenzione ai dettagli, offrendo soluzioni su misura per ogni esigenza. 
+      <br>
+      Il nostro impegno è quello di trasformare ogni progetto in una realizzazione solida, duratura e conforme alle sue aspettative.
+      <br>
+      Invia la richiesta utilizzando questo servizio di preventivo online, e il nostro team la contatterà al più presto per fornirle un preventivo dettagliato e personalizzato.
+    </p>
+
+    <!-- Wizard Preventivo Multi-step -->
+    <main class="flex flex-col gap-6 px-5 py-10 min-h-auto text-center @container">
+
+      <section id="wizard-preventivo" class="px-4 py-8 mt-4">
+      
+        <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">
+          Richiedi un preventivo gratuito
+        </h2>
+      
+        <form id="wizardForm" class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow flex flex-col gap-6 text-left" action="https://formspree.io/f/xjkronyn" method="POST">
+      
+          <!-- Step 1 -->
+          <div class="wizard-step" data-step="1">
+            <label class="block text-lg font-medium mb-4">Di cosa hai bisogno?</label>
+            <div class="flex flex-col gap-3">
+              <label><input type="radio" name="bisogno" value="Ristrutturazione Completa" required class="mr-2" /> Ristrutturazione Completa</label>
+              <label><input type="radio" name="bisogno" value="Ristrutturazione Parziale" required class="mr-2" /> Ristrutturazione Parziale</label>
+              <label><input type="radio" name="bisogno" value="Progetto di Interior Design" required class="mr-2" /> Progetto di Interior Design</label>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="wizard-step hidden" data-step="2">
+            <label class="block text-lg font-medium mb-4">L’immobile è di tua proprietà?</label>
+            <div class="flex flex-col gap-3">
+              <label><input type="radio" name="proprieta" value="Si" required class="mr-2" /> Sì</label>
+              <label><input type="radio" name="proprieta" value="In fase di acquisto" required class="mr-2" /> In fase di acquisto, compromesso o rogito organizzati</label>
+              <label><input type="radio" name="proprieta" value="No" required class="mr-2" /> No, sto valutando alcuni immobili da acquistare</label>
+            </div>
+          </div>
+          <!-- Step 3 -->
+          <div class="wizard-step hidden" data-step="3">
+            <label class="block text-lg font-medium mb-4">Tipologia Immobile:</label>
+            <div class="flex flex-col gap-3">
+              <label><input type="radio" name="tipologia" value="Appartamento" required class="mr-2" /> Appartamento</label>
+              <label><input type="radio" name="tipologia" value="Villa" required class="mr-2" /> Villa</label>
+              <label><input type="radio" name="tipologia" value="Ufficio/Locale Commerciale" required class="mr-2" /> Ufficio/Locale Commerciale</label>
+              <label><input type="radio" name="tipologia" value="Altro" required class="mr-2" /> Altro</label>
+            </div>
+          </div>
+          <!-- Step 4 -->
+          <div class="wizard-step hidden" data-step="4">
+            <label class="block text-lg font-medium mb-4">Quale è l'indirizzo dell'immobile?</label>
+            <input type="text" name="indirizzo" placeholder="Via/Piazza/Corso e numero civico" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
+          </div>
+          <!-- Step 5 -->
+          <div class="wizard-step hidden" data-step="5">
+            <label class="block text-lg font-medium mb-4">Metratura Immobile (mq):</label>
+            <div class="flex flex-col gap-3">
+              <label><input type="radio" name="metratura" value="50-70 mq" required class="mr-2" /> 50-70 mq</label>
+              <label><input type="radio" name="metratura" value="70-90 mq" required class="mr-2" /> 70-90 mq</label>
+              <label><input type="radio" name="metratura" value="90-110 mq" required class="mr-2" /> 90-110 mq</label>
+              <label><input type="radio" name="metratura" value="110-150 mq" required class="mr-2" /> 110-150 mq</label>
+              <label><input type="radio" name="metratura" value="150-200 mq" required class="mr-2" /> 150-200 mq</label>
+              <label><input type="radio" name="metratura" value="oltre 200 mq" required class="mr-2" /> oltre 200 mq</label>
+            </div>
+          </div>
+          <!-- Step 6 -->
+          <div class="wizard-step hidden" data-step="6">
+            <label class="block text-lg font-medium mb-4">Quale stile preferisci?</label>
+            <div class="flex flex-col gap-3">
+              <label><input type="radio" name="stile" value="Boho Chic" required class="mr-2" /> Boho Chic</label>
+              <label><input type="radio" name="stile" value="Classico Moderno" required class="mr-2" /> Classico Moderno</label>
+              <label><input type="radio" name="stile" value="Shabby Chic" required class="mr-2" /> Shabby Chic</label>
+              <label><input type="radio" name="stile" value="Contemporaneo" required class="mr-2" /> Contemporaneo</label>
+              <label><input type="radio" name="stile" value="Eclettico" required class="mr-2" /> Eclettico</label>
+              <label><input type="radio" name="stile" value="Etnico" required class="mr-2" /> Etnico</label>
+              <label><input type="radio" name="stile" value="Industrial" required class="mr-2" /> Industrial</label>
+              <label><input type="radio" name="stile" value="Rustico" required class="mr-2" /> Rustico</label>
+              <label><input type="radio" name="stile" value="Scandinavo" required class="mr-2" /> Scandinavo</label>
+              <label><input type="radio" name="stile" value="Altro" required class="mr-2" /> Altro</label>
+            </div>
+          </div>
+          <!-- Step 7 -->
+          <div class="wizard-step hidden" data-step="7">
+            <label class="block text-lg font-medium mb-4">Cosa è più importante per te?</label>
+            <div class="flex flex-col gap-3">
+              <label><input type="radio" name="importante" value="Tempi" required class="mr-2" /> Tempi, la ristrutturazione deve durare il meno possibile.</label>
+              <label><input type="radio" name="importante" value="Costi" required class="mr-2" /> Costi, ottimizzare la spesa nelle soluzioni e materiali.</label>
+              <label><input type="radio" name="importante" value="Risultato" required class="mr-2" /> Risultato, con attenzione a tempi e costi, ma voglio il miglior risultato possibile.</label>
+            </div>
+          </div>
+          <!-- Step 8 -->
+          <div class="wizard-step hidden" data-step="8">
+            <label class="block text-lg font-medium mb-4">Complimenti hai finito! Inserisci i tuoi dati per essere ricontattato.</label>
+            <div class="flex flex-col gap-4">
+              <input type="text" name="nomecognome" placeholder="Nome e Cognome" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
+              <input type="email" name="email" placeholder="Email" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
+              <input type="tel" name="telefono" placeholder="Telefono" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
+              <div class="flex items-start gap-2">
+                <input type="checkbox" id="privacy" name="privacy" required class="accent-[#0c7ff2] mt-1" />
+                <label for="privacy" class="text-sm text-[#111418]">
+                  Autorizzazione al consenso e al trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) altresì Acconsento a che questo sito conservi le informazioni inviate così che possano rispondere alla mia richiesta.
+                </label>
+              </div>
+            </div>
+          </div>
+          <!-- Bottoni Navigazione -->
+          <div class="flex justify-between mt-4">
+            <button type="button" id="prevBtn" class="bg-gray-200 text-[#111418] font-bold py-2 px-6 rounded transition-colors" style="display:none;">Indietro</button>
+            <button type="button" id="nextBtn" class="bg-[#0c7ff2] hover:bg-[#0a6cd9] text-white font-bold py-2 px-6 rounded transition-colors">Avanti</button>
+            <button type="submit" id="submitBtn" class="bg-[#0c7ff2] hover:bg-[#0a6cd9] text-white font-bold py-2 px-6 rounded transition-colors hidden">Invia richiesta</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </div>
+  
+</div>
+<script>
+  // filepath: /home/dometec/git/Osys/hmristrutturazioni/preventivo.html
+  document.addEventListener('DOMContentLoaded', function () {
+    let currentStep = 1;
+    const totalSteps = 8;
+    const steps = document.querySelectorAll('.wizard-step');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const submitBtn = document.getElementById('submitBtn');
+    const form = document.getElementById('wizardForm');
+
+    function showStep(step) {
+      steps.forEach((el, idx) => {
+        el.classList.toggle('hidden', idx !== step - 1);
+      });
+      prevBtn.style.display = step === 1 ? 'none' : '';
+      nextBtn.classList.toggle('hidden', step === totalSteps);
+      submitBtn.classList.toggle('hidden', step !== totalSteps);
+    }
+
+    function validateStep(step) {
+      const currentFields = steps[step - 1].querySelectorAll('input[required], textarea[required]');
+      for (let field of currentFields) {
+        if (field.type === 'radio') {
+          const name = field.name;
+          if (![...steps[step - 1].querySelectorAll(`input[name="${name}"]`)].some(r => r.checked)) {
+            return false;
+          }
+        } else if (field.type === 'checkbox') {
+          if (!field.checked) return false;
+        } else if (!field.value) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    nextBtn.addEventListener('click', function () {
+      if (!validateStep(currentStep)) {
+        alert('Compila tutti i campi obbligatori per proseguire.');
+        return;
+      }
+      if (currentStep < totalSteps) {
+        currentStep++;
+        showStep(currentStep);
+      }
+    });
+
+    prevBtn.addEventListener('click', function () {
+      if (currentStep > 1) {
+        currentStep--;
+        showStep(currentStep);
+      }
+    });
+
+    form.addEventListener('submit', function (e) {
+      if (!validateStep(currentStep)) {
+        e.preventDefault();
+        alert('Compila tutti i campi obbligatori per proseguire.');
+      }
+      // Qui puoi aggiungere la logica di invio dati (AJAX o altro)
+    });
+
+    showStep(currentStep);
+  });
+</script>

@@ -1,0 +1,95 @@
+---
+layout: default
+---
+
+<!-- Carosello semplice con immagini e video -->
+<article class="relative flex size-full min-h-auto flex-col bg-white justify-between group/design-root overflow-x-hidden" 
+  style="font-family: 'Work Sans', 'Noto Sans', sans-serif; 
+  background-image: url('/images/edilizia-bg.jpg'); 
+  background-size: cover; 
+  background-position: center;">
+
+  <section  class="px-4 py-8 bg-white bg-opacity-90 min-h-auto">
+
+    <h1 style="font-size:2.2em; font-weight:700; margin-bottom:0.3em; letter-spacing:-1px; text-align:center;">
+      {{ page.title }}
+    </h1>
+    
+    <p style="font-size:1.25em; margin-bottom:1.5em; text-align:center; max-width:600px; margin-left:auto; margin-right:auto;">
+      {{ page.description }}
+    </p>
+    
+    <div class="carousel-container" style="max-width:700px;margin:0 auto 32px auto;position:relative; background: linear-gradient(135deg, #f0f4fa 0%, #e6eaf3 100%); border-radius: 18px; box-shadow: 0 2px 16px #0001;">
+      <div id="carousel-media" class="carousel-media" style="overflow:hidden;">
+        {% for media in page.gallery %}
+          <div class="carousel-slide" style="display:{% if forloop.first %}block{% else %}none{% endif %}; text-align:center;">
+            {% if media contains '.mp4' %}
+              <video controls class="gallery-video" style="max-width:100%;margin-bottom:16px;display:inline-block;">
+                <source src="{{ media }}" type="video/mp4">
+                Il tuo browser non supporta il tag video.
+              </video>
+            {% else %}
+              <img src="{{ media }}" alt="{{ page.title }} foto" class="gallery-img" style="max-width:100%;margin-bottom:16px;display:inline-block;"/>
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      <button id="carousel-prev" aria-label="Precedente" style="position:absolute;top:50%;left:0;transform:translateY(-50%);background:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:1.5em;border-radius:30%;box-shadow:0 2px 8px #0002;display:none;">&#8592;</button>
+      <button id="carousel-next" aria-label="Successivo" style="position:absolute;top:50%;right:0;transform:translateY(-50%);background:#fff;border:none;padding:8px 12px;cursor:pointer;font-size:1.5em;border-radius:30%;box-shadow:0 2px 8px #0002;display:none;">&#8594;</button>
+    </div>
+    
+    <div class="servizio-content">
+      {{ content }}
+    </div>
+  
+  </section>
+
+</article>
+
+<script>
+  // filepath: /home/dometec/git/Osys/hmristrutturazioni/_layouts/servizio.html
+  document.addEventListener('DOMContentLoaded', function () {
+    const slides = document.querySelectorAll('.carousel-slide');
+    const prevBtn = document.getElementById('carousel-prev');
+    const nextBtn = document.getElementById('carousel-next');
+    let current = 0;
+
+    // Mostra le frecce solo se ci sono almeno 2 slide
+    if (slides.length > 1) {
+      prevBtn.style.display = '';
+      nextBtn.style.display = '';
+    }
+
+    function showSlide(idx) {
+      slides.forEach((slide, i) => {
+        slide.style.display = (i === idx) ? 'block' : 'none';
+        // Pausa i video non attivi
+        if (i !== idx) {
+          const video = slide.querySelector('video');
+          if (video) video.pause();
+        }
+      });
+    }
+
+    prevBtn.addEventListener('click', function () {
+      current = (current - 1 + slides.length) % slides.length;
+      showSlide(current);
+    });
+
+    nextBtn.addEventListener('click', function () {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    });
+
+    // Gestione tasti freccia
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'ArrowLeft') {
+        prevBtn.click();
+      } else if (e.key === 'ArrowRight') {
+        nextBtn.click();
+      }
+    });
+
+    showSlide(current);
+  });
+</script>
