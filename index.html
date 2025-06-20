@@ -98,7 +98,7 @@
 
     </div>
 
-    
+    <!-- Hero Section -->
     <div class="@container">
       <div class="@[480px]:p-4">
         <div
@@ -120,87 +120,103 @@
               H&amp;M Ristrutturazioni si specializza in ristrutturazioni di alta qualità, dal concept alla realizzazione. Il nostro team di esperti garantisce un'esperienza impeccabile e soddisfacente.
             </h2>
           </div>
-          <button
+          <a href="contatti.html"
             onclick="document.getElementById('contatti').scrollIntoView({behavior: 'smooth'})"
             class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#0c7ff2] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:bg-[#0a6cd9] transition-colors duration-300">
             <span class="truncate">Contattaci</span>
-          </button>
+          </a>
         </div>
       </div>
     </div>
 
-    <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-      <a name="chi-siamo">Chi siamo</a>
-    </h2>
+    <!-- Main Content -->
+    <div class="flex flex-col gap-10 px-4 py-10 @container">
+      
+      <h1 class="text-[#111418] text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+        <a name="chi-siamo">Chi siamo</a>
+      </h1>
 
+      <p>H&M Ristrutturazioni Srl è un’impresa edile con sede in Monza (Milano), attiva da oltre 20 anni nel settore delle costruzioni e delle ristrutturazioni.</p>
+      <p>Specializzata in lavori civili e industriali, l’azienda si distingue per l’alta qualità delle realizzazioni, l’impiego di materiali certificati e tecnologie all’avanguardia. 
+        Grazie a un team di professionisti qualificati, H&M Ristrutturazioni è in grado di gestire ogni fase del progetto: dalla progettazione alla consegna chiavi in mano, offrendo soluzioni su misura per privati, aziende e pubbliche amministrazioni. </p>        
+      <p>Tra i servizi offerti figurano nuove costruzioni, ristrutturazioni complete, interventi di efficientamento energetico, rifacimento tetti, isolamento termico e acustico, opere in cartongesso e manutenzioni edili. 
+        L’azienda opera nel rispetto delle normative vigenti in materia di sicurezza e sostenibilità ambientale, con una costante attenzione ai dettagli e ai desideri del cliente. 
+        H&M Ristrutturazion si impegna quotidianamente per garantire puntualità, affidabilità e trasparenza in ogni intervento, instaurando un rapporto di fiducia duraturo con i propri clienti. 
+        La passione per il costruire e la continua formazione del personale rendono l’impresa un punto di riferimento nel panorama edilizio locale. 
+        Contattaci per un sopralluogo gratuito e un preventivo senza impegno.</p>
 
+    </div>
+
+    <!-- Services Section -->
     <div class="flex flex-col gap-10 px-4 py-10 @container">
 
       <h1 class="text-[#111418] text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
         <a name="servizi">I Nostri Servizi</a>
       </h1>
 
-      <div class="flex flex-col gap-4">
-        <h2 class="text-[#111418] tracking-light text-[22px] font-bold leading-tight @[480px]:text-4xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em] max-w-[720px]">
-          Soluzioni Complete di Ristrutturazione
-        </h2>
-        <p class="text-[#111418] text-base font-normal leading-normal max-w-[720px]">
-          Offriamo una vasta gamma di servizi di ristrutturazione personalizzati per soddisfare le tue esigenze e preferenze specifiche.
-        </p>
-      </div>
+      <p>Offriamo una vasta gamma di servizi di ristrutturazione personalizzati per soddisfare le tue esigenze e preferenze specifiche.</p>
 
-      <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3">
-
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3">
         <div class="flex flex-col gap-3 pb-3">
-          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="
-                background-image: url('images/lavori/cucina.webp');
-              "></div>
+          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('images/lavori/cucina.webp');"></div>
           <div>
-            <p class="text-[#111418] text-base font-medium leading-normal">
-              Ristrutturazione Cucine
-            </p>
-            <p class="text-[#60758a] text-sm font-normal leading-normal">
-              Aggiorna la tua cucina con design moderni e layout efficienti.
-            </p>
-          </div>
-        </div>
-
-        <div class="flex flex-col gap-3 pb-3">
-          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="
-                background-image: url('images/lavori/bagno.webp');
-              "></div>
-          <div>
-            <p class="text-[#111418] text-base font-medium leading-normal">
-              Ristrutturazione Bagni
-            </p>
-            <p class="text-[#60758a] text-sm font-normal leading-normal">
-              Crea uno spazio bagno lussuoso e funzionale.
-            </p>
+            <p class="text-[#111418] text-base font-medium leading-normal">Ristrutturazione Cucine</p>
+            <p class="text-[#60758a] text-sm font-normal leading-normal">Aggiorna la tua cucina con design moderni e layout efficienti.</p>
           </div>
         </div>
         <div class="flex flex-col gap-3 pb-3">
-          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="
-                background-image: url('images/lavori/soggiorno.webp');
-              "></div>
+          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('images/lavori/bagno.webp');"></div>
           <div>
-            <p class="text-[#111418] text-base font-medium leading-normal">
-              Ristrutturazione Soggiorni
-            </p>
-            <p class="text-[#60758a] text-sm font-normal leading-normal">
-              Trasforma il tuo soggiorno in un'area confortevole e di stile.
-            </p>
+            <p class="text-[#111418] text-base font-medium leading-normal">Ristrutturazione Bagni</p>
+            <p class="text-[#60758a] text-sm font-normal leading-normal">Crea uno spazio bagno lussuoso e funzionale.</p>
+          </div>
+        </div>
+        <div class="flex flex-col gap-3 pb-3">
+          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('images/lavori/soggiorno.webp');"></div>
+          <div>
+            <p class="text-[#111418] text-base font-medium leading-normal">Ristrutturazione Soggiorni</p>
+            <p class="text-[#60758a] text-sm font-normal leading-normal">Trasforma il tuo soggiorno in un'area confortevole e di stile.</p>
+          </div>
+        </div>        <div class="flex flex-col gap-3 pb-3">
+          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('images/lavori/soggiorno.webp');"></div>
+          <div>
+            <p class="text-[#111418] text-base font-medium leading-normal">Ristrutturazione Soggiorni</p>
+            <p class="text-[#60758a] text-sm font-normal leading-normal">Trasforma il tuo soggiorno in un'area confortevole e di stile.</p>
+          </div>
+        </div>        <div class="flex flex-col gap-3 pb-3">
+          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('images/lavori/soggiorno.webp');"></div>
+          <div>
+            <p class="text-[#111418] text-base font-medium leading-normal">Ristrutturazione Soggiorni</p>
+            <p class="text-[#60758a] text-sm font-normal leading-normal">Trasforma il tuo soggiorno in un'area confortevole e di stile.</p>
+          </div>
+        </div>        <div class="flex flex-col gap-3 pb-3">
+          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('images/lavori/soggiorno.webp');"></div>
+          <div>
+            <p class="text-[#111418] text-base font-medium leading-normal">Ristrutturazione Soggiorni</p>
+            <p class="text-[#60758a] text-sm font-normal leading-normal">Trasforma il tuo soggiorno in un'area confortevole e di stile.</p>
+          </div>
+        </div>        <div class="flex flex-col gap-3 pb-3">
+          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('images/lavori/soggiorno.webp');"></div>
+          <div>
+            <p class="text-[#111418] text-base font-medium leading-normal">Ristrutturazione Soggiorni</p>
+            <p class="text-[#60758a] text-sm font-normal leading-normal">Trasforma il tuo soggiorno in un'area confortevole e di stile.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
-      <a name="lavori">Progetti Realizzati</a>
-    </h2>
+    <!-- Projects Section -->
+    <div class="flex flex-col gap-10 px-4 py-10 @container">
 
-    <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
-      <div class="flex items-stretch p-4 gap-3">
-        <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+      <h1 class="text-[#111418] text-[32px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">
+        <a name="lavori">Lavori eseguiti</a>
+      </h1>
+
+      <p>Di seguito ti presentiamo una selezioni dei progetti che abbiamo realizzato</p>
+
+      <div class="grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3">
+
+        <div class="flex flex-col gap-3 pb-3">
           <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col" style="
                 background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAXq2cOlDaoB2RArPhdW1DW5i4vpb__Z5uAP-a8Gxn9Z3XOfA9nLVG_zCienpsvwhawSSlU6HOfcd1cKT8S_pS90yhf0fheywgpz0xeLT_-fuOTMRqAWYjwNNQ_I9mPfGZ7OTbjXW_pbCUzsaC1Gb8Gkzbnga8jPn_diZTVZ8rHrFx6Z1BduOqHvXYBMYct8ElLhN6cGaoHMzvSW8CwpTgRZ9fDPkf0NMfBbXZ2yzWxSygm_KzoWF_X-NGNltM9mtJATZdtDQ_OzjE');
               "></div>
@@ -213,6 +229,7 @@
             </p>
           </div>
         </div>
+
         <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
           <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col" style="
                 background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBbhvIMNXQkN5wDKMp5RN2mm6mF0xLX5fTIIa6pHW3ZBL_1sgkwDiFmeCRJf7f61ddoldzQS2yFO3OA244flfvFtyY4YNj2hJ5OU0Ruu9Hl-fmWXtFGyQt0tI4skIEQvgak7IoRAElEM7y82vMdSDyDcUq9ke9b_a8T9F3yfA-EWuHlu18ehDSGBE-xIypdPFcxcqcDkBw5Z_ksoMyPWDskj0T3WlqSnZZB1dyVxHbd9lCKhD468mJIr40FfDgqfymYXGZQoxj4gwQ');
@@ -226,6 +243,7 @@
             </p>
           </div>
         </div>
+
         <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
           <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col" style="
                 background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkbFvlYk3pXKLEV9BjqUwuBLkUhwAAC-RPGCSkfBNkiyJ_iSfqvS0Fz4ALRqYLsWiqI0g6p4TdA4pm6EKvnGPPEh5kcHUOglCHCZZCoA45Oly47gIeHggBc6IWEStOpzKZr7aPGRuSDBxLHZCVa8SYeQn_T1LevrM3wqTtEBbUl_dbN45q5_7afHUZ1F8vW6YVh1fs2_EzmApQw9ZlDX0ik6eEWLmTqW-gaTniTDAooya2pDFynpmm9FgtnjbZWP2SZJCpuv91_uU');
@@ -239,6 +257,35 @@
             </p>
           </div>
         </div>
+
+        <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col" style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkbFvlYk3pXKLEV9BjqUwuBLkUhwAAC-RPGCSkfBNkiyJ_iSfqvS0Fz4ALRqYLsWiqI0g6p4TdA4pm6EKvnGPPEh5kcHUOglCHCZZCoA45Oly47gIeHggBc6IWEStOpzKZr7aPGRuSDBxLHZCVa8SYeQn_T1LevrM3wqTtEBbUl_dbN45q5_7afHUZ1F8vW6YVh1fs2_EzmApQw9ZlDX0ik6eEWLmTqW-gaTniTDAooya2pDFynpmm9FgtnjbZWP2SZJCpuv91_uU');
+              "></div>
+          <div>
+            <p class="text-[#111418] text-base font-medium leading-normal">
+              Soggiorno Elegante
+            </p>
+            <p class="text-[#60758a] text-sm font-normal leading-normal">
+              Uno spazio abitativo confortevole e di stile.
+            </p>
+          </div>
+        </div>
+
+        <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+          <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col" style="
+                background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBkbFvlYk3pXKLEV9BjqUwuBLkUhwAAC-RPGCSkfBNkiyJ_iSfqvS0Fz4ALRqYLsWiqI0g6p4TdA4pm6EKvnGPPEh5kcHUOglCHCZZCoA45Oly47gIeHggBc6IWEStOpzKZr7aPGRuSDBxLHZCVa8SYeQn_T1LevrM3wqTtEBbUl_dbN45q5_7afHUZ1F8vW6YVh1fs2_EzmApQw9ZlDX0ik6eEWLmTqW-gaTniTDAooya2pDFynpmm9FgtnjbZWP2SZJCpuv91_uU');
+              "></div>
+          <div>
+            <p class="text-[#111418] text-base font-medium leading-normal">
+              Soggiorno Elegante
+            </p>
+            <p class="text-[#60758a] text-sm font-normal leading-normal">
+              Uno spazio abitativo confortevole e di stile.
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
 
