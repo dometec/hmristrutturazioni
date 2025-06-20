@@ -30,75 +30,176 @@
 
     <div class="bg-white bg-opacity-90 min-h-screen">
       
+      <!-- Wizard Preventivo Multi-step -->
       <main class="flex flex-col gap-6 px-5 py-10 text-center @container">
-        <!-- Sezione Contatti Personalizzata -->
-        <section id="contatti" class="px-4 py-8 mt-4">
+        <section id="wizard-preventivo" class="px-4 py-8 mt-4">
           <h2 class="text-[#111418] text-[22px] font-bold leading-tight tracking-[-0.015em] mb-4">
             Richiedi un preventivo gratuito
           </h2>
-          <div class="flex flex-col md:flex-row gap-8 max-w-4xl mx-auto">
-            <!-- Dati di esempio a sinistra -->
-            <div class="flex-1 flex flex-col gap-3 bg-white rounded-lg p-6 shadow min-w-[220px]">
-              <div>
-                <span class="font-bold">Nome:</span>
-                Mario Rossi
-              </div>
-              <div>
-                <span class="font-bold">Telefono:</span>
-                <a href="tel:+393331234567" class="text-[#0c7ff2] hover:underline ml-1">+39 333 1234567</a>
-              </div>
-              <div>
-                <span class="font-bold">Email:</span>
-                <a href="mailto:info@hmristrutturazioni.it" class="text-[#0c7ff2] hover:underline ml-1">info@hmristrutturazioni.it</a>
+          <form id="wizardForm" class="max-w-2xl mx-auto bg-white p-6 rounded-lg shadow flex flex-col gap-6">
+            <!-- Step 1 -->
+            <div class="wizard-step" data-step="1">
+              <label class="block text-lg font-medium mb-4">Di cosa hai bisogno?</label>
+              <div class="flex flex-col gap-3">
+                <label><input type="radio" name="bisogno" value="Ristrutturazione Completa" required class="mr-2" /> Ristrutturazione Completa</label>
+                <label><input type="radio" name="bisogno" value="Ristrutturazione Parziale" required class="mr-2" /> Ristrutturazione Parziale</label>
+                <label><input type="radio" name="bisogno" value="Progetto di Interior Design" required class="mr-2" /> Progetto di Interior Design</label>
               </div>
             </div>
-            <!-- Form a destra -->
-            <form class="flex-1 flex flex-col gap-4 bg-white p-6 rounded-lg shadow" autocomplete="off">
-              <div class="flex flex-col md:flex-row gap-4">
-                <div class="flex-1">
-                  <label for="nome" class="block text-sm font-medium text-[#111418] mb-1">Nome</label>
-                  <input type="text" id="nome" name="nome" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
+            <!-- Step 2 -->
+            <div class="wizard-step hidden" data-step="2">
+              <label class="block text-lg font-medium mb-4">L’immobile è di tua proprietà?</label>
+              <div class="flex flex-col gap-3">
+                <label><input type="radio" name="proprieta" value="Si" required class="mr-2" /> Sì</label>
+                <label><input type="radio" name="proprieta" value="In fase di acquisto" required class="mr-2" /> In fase di acquisto, compromesso o rogito organizzati</label>
+                <label><input type="radio" name="proprieta" value="No" required class="mr-2" /> No, sto valutando alcuni immobili da acquistare</label>
+              </div>
+            </div>
+            <!-- Step 3 -->
+            <div class="wizard-step hidden" data-step="3">
+              <label class="block text-lg font-medium mb-4">Tipologia Immobile:</label>
+              <div class="flex flex-col gap-3">
+                <label><input type="radio" name="tipologia" value="Appartamento" required class="mr-2" /> Appartamento</label>
+                <label><input type="radio" name="tipologia" value="Villa" required class="mr-2" /> Villa</label>
+                <label><input type="radio" name="tipologia" value="Ufficio/Locale Commerciale" required class="mr-2" /> Ufficio/Locale Commerciale</label>
+                <label><input type="radio" name="tipologia" value="Altro" required class="mr-2" /> Altro</label>
+              </div>
+            </div>
+            <!-- Step 4 -->
+            <div class="wizard-step hidden" data-step="4">
+              <label class="block text-lg font-medium mb-4">Quale è l'indirizzo dell'immobile?</label>
+              <input type="text" name="indirizzo" placeholder="Via/Piazza/Corso e numero civico" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
+            </div>
+            <!-- Step 5 -->
+            <div class="wizard-step hidden" data-step="5">
+              <label class="block text-lg font-medium mb-4">Metratura Immobile (mq):</label>
+              <div class="flex flex-col gap-3">
+                <label><input type="radio" name="metratura" value="50-70 mq" required class="mr-2" /> 50-70 mq</label>
+                <label><input type="radio" name="metratura" value="70-90 mq" required class="mr-2" /> 70-90 mq</label>
+                <label><input type="radio" name="metratura" value="90-110 mq" required class="mr-2" /> 90-110 mq</label>
+                <label><input type="radio" name="metratura" value="110-150 mq" required class="mr-2" /> 110-150 mq</label>
+                <label><input type="radio" name="metratura" value="150-200 mq" required class="mr-2" /> 150-200 mq</label>
+                <label><input type="radio" name="metratura" value="oltre 200 mq" required class="mr-2" /> oltre 200 mq</label>
+              </div>
+            </div>
+            <!-- Step 6 -->
+            <div class="wizard-step hidden" data-step="6">
+              <label class="block text-lg font-medium mb-4">Quale stile preferisci?</label>
+              <div class="flex flex-col gap-3">
+                <label><input type="radio" name="stile" value="Boho Chic" required class="mr-2" /> Boho Chic</label>
+                <label><input type="radio" name="stile" value="Classico Moderno" required class="mr-2" /> Classico Moderno</label>
+                <label><input type="radio" name="stile" value="Shabby Chic" required class="mr-2" /> Shabby Chic</label>
+                <label><input type="radio" name="stile" value="Contemporaneo" required class="mr-2" /> Contemporaneo</label>
+                <label><input type="radio" name="stile" value="Eclettico" required class="mr-2" /> Eclettico</label>
+                <label><input type="radio" name="stile" value="Etnico" required class="mr-2" /> Etnico</label>
+                <label><input type="radio" name="stile" value="Industrial" required class="mr-2" /> Industrial</label>
+                <label><input type="radio" name="stile" value="Rustico" required class="mr-2" /> Rustico</label>
+                <label><input type="radio" name="stile" value="Scandinavo" required class="mr-2" /> Scandinavo</label>
+                <label><input type="radio" name="stile" value="Altro" required class="mr-2" /> Altro</label>
+              </div>
+            </div>
+            <!-- Step 7 -->
+            <div class="wizard-step hidden" data-step="7">
+              <label class="block text-lg font-medium mb-4">Cosa è più importante per te?</label>
+              <div class="flex flex-col gap-3">
+                <label><input type="radio" name="importante" value="Tempi" required class="mr-2" /> Tempi, la ristrutturazione deve durare il meno possibile.</label>
+                <label><input type="radio" name="importante" value="Costi" required class="mr-2" /> Costi, ottimizzare la spesa nelle soluzioni e materiali.</label>
+                <label><input type="radio" name="importante" value="Risultato" required class="mr-2" /> Risultato, con attenzione a tempi e costi, ma voglio il miglior risultato.</label>
+              </div>
+            </div>
+            <!-- Step 8 -->
+            <div class="wizard-step hidden" data-step="8">
+              <label class="block text-lg font-medium mb-4">Complimenti hai finito! Inserisci i tuoi dati per essere ricontattato.</label>
+              <div class="flex flex-col gap-4">
+                <input type="text" name="nomecognome" placeholder="Nome e Cognome" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
+                <input type="email" name="email" placeholder="Email" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
+                <input type="tel" name="telefono" placeholder="Telefono" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
+                <div class="flex items-start gap-2">
+                  <input type="checkbox" id="privacy" name="privacy" required class="accent-[#0c7ff2] mt-1" />
+                  <label for="privacy" class="text-sm text-[#111418]">
+                    Autorizzazione al consenso e al trattamento dei dati personali ai sensi del Regolamento UE 2016/679 (GDPR) altresì Acconsento a che questo sito conservi le informazioni inviate così che possano rispondere alla mia richiesta.
+                  </label>
                 </div>
-                <div class="flex-1">
-                  <label for="cognome" class="block text-sm font-medium text-[#111418] mb-1">Cognome</label>
-                  <input type="text" id="cognome" name="cognome" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
-                </div>
               </div>
-              <div class="flex flex-col md:flex-row gap-4">
-                <div class="flex-1">
-                  <label for="telefono" class="block text-sm font-medium text-[#111418] mb-1">Telefono</label>
-                  <input type="tel" id="telefono" name="telefono" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
-                </div>
-                <div class="flex-1">
-                  <label for="email" class="block text-sm font-medium text-[#111418] mb-1">Indirizzo Email</label>
-                  <input type="email" id="email" name="email" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
-                </div>
-              </div>
-              <div>
-                <label for="oggetto" class="block text-sm font-medium text-[#111418] mb-1">Oggetto</label>
-                <input type="text" id="oggetto" name="oggetto" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]" />
-              </div>
-              <div>
-                <label for="messaggio" class="block text-sm font-medium text-[#111418] mb-1">Messaggio</label>
-                <textarea id="messaggio" name="messaggio" rows="5" required class="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-[#0c7ff2]"></textarea>
-              </div>
-              <div class="flex items-center gap-2">
-                <input type="checkbox" id="privacy" name="privacy" required class="accent-[#0c7ff2]" />
-                <label for="privacy" class="text-sm text-[#111418]">Acconsento al trattamento dei dati personali secondo la normativa vigente.</label>
-              </div>
-              <button type="submit" class="mt-2 bg-[#0c7ff2] hover:bg-[#0a6cd9] text-white font-bold py-2 px-6 rounded transition-colors">
-                Invia richiesta
-              </button>
-            </form>
-          </div>
+            </div>
+            <!-- Bottoni Navigazione -->
+            <div class="flex justify-between mt-4">
+              <button type="button" id="prevBtn" class="bg-gray-200 text-[#111418] font-bold py-2 px-6 rounded transition-colors" style="display:none;">Indietro</button>
+              <button type="button" id="nextBtn" class="bg-[#0c7ff2] hover:bg-[#0a6cd9] text-white font-bold py-2 px-6 rounded transition-colors">Avanti</button>
+              <button type="submit" id="submitBtn" class="bg-[#0c7ff2] hover:bg-[#0a6cd9] text-white font-bold py-2 px-6 rounded transition-colors hidden">Invia richiesta</button>
+            </div>
+          </form>
         </section>
-
       </main>
-
     </div>
     
   </div>
+  <script>
+    // filepath: /home/dometec/git/Osys/hmristrutturazioni/preventivo.html
+    document.addEventListener('DOMContentLoaded', function () {
+      let currentStep = 1;
+      const totalSteps = 8;
+      const steps = document.querySelectorAll('.wizard-step');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      const submitBtn = document.getElementById('submitBtn');
+      const form = document.getElementById('wizardForm');
 
+      function showStep(step) {
+        steps.forEach((el, idx) => {
+          el.classList.toggle('hidden', idx !== step - 1);
+        });
+        prevBtn.style.display = step === 1 ? 'none' : '';
+        nextBtn.classList.toggle('hidden', step === totalSteps);
+        submitBtn.classList.toggle('hidden', step !== totalSteps);
+      }
+
+      function validateStep(step) {
+        const currentFields = steps[step - 1].querySelectorAll('input[required], textarea[required]');
+        for (let field of currentFields) {
+          if (field.type === 'radio') {
+            const name = field.name;
+            if (![...steps[step - 1].querySelectorAll(`input[name="${name}"]`)].some(r => r.checked)) {
+              return false;
+            }
+          } else if (field.type === 'checkbox') {
+            if (!field.checked) return false;
+          } else if (!field.value) {
+            return false;
+          }
+        }
+        return true;
+      }
+
+      nextBtn.addEventListener('click', function () {
+        if (!validateStep(currentStep)) {
+          alert('Compila tutti i campi obbligatori per proseguire.');
+          return;
+        }
+        if (currentStep < totalSteps) {
+          currentStep++;
+          showStep(currentStep);
+        }
+      });
+
+      prevBtn.addEventListener('click', function () {
+        if (currentStep > 1) {
+          currentStep--;
+          showStep(currentStep);
+        }
+      });
+
+      form.addEventListener('submit', function (e) {
+        if (!validateStep(currentStep)) {
+          e.preventDefault();
+          alert('Compila tutti i campi obbligatori per proseguire.');
+        }
+        // Qui puoi aggiungere la logica di invio dati (AJAX o altro)
+      });
+
+      showStep(currentStep);
+    });
+  </script>
 </body>
 
 </html>
