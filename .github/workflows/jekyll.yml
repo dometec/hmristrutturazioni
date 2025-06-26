@@ -28,7 +28,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'  # o la versione che ti serve
+          ruby-version: '3.2'
           bundler-cache: true
 
       - name: Install dependencies
@@ -40,7 +40,7 @@ jobs:
       - name: Build Jekyll site
         run: bundle exec jekyll build
 
-      - name: Upload Pages artifact
+      - name: Upload site artifact
         uses: actions/upload-pages-artifact@v2
         with:
           path: _site
@@ -51,8 +51,8 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
+
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
-         
