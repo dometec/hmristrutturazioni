@@ -1,8 +1,8 @@
 ---
 layout: servizio
-title: Ristrutturazione Bagno
-image: images/lavori/bagno.webp
-description: Ristrutturazione completa del bagno con materiali di pregio.
+title: Ristrutturazione Bagno 2
+image: /images/lavori/bagno.webp
+description: Ristrutturazione completa del bagno con materiali di uso comune.
 gallery:
   - /assets/img/bagno1.jpg
   - /assets/img/bagno2.jpg
