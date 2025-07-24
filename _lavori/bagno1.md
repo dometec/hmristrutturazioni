@@ -1,8 +1,8 @@
 ---
 layout: servizio
-title: Ristrutturazione Bagno Bello di Oggi
+title: Ristrutturazione Bagno
 image: /images/lavori/bagno.webp
-description: Ristrutturazione completa del bagno con materiali di vero pregio.descrizione di oggi.
+description: Ristrutturazione completa del bagno con materiali di vero pregio
 gallery:
   - /images/lavori/bagno1/bagno1.jpeg
   - /images/lavori/bagno1/bagno2.jpeg
@@ -22,4 +22,4 @@ gallery:
   - /images/lavori/bagno1/video.mp4
 ---
 
-On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee the pain and trouble that are bound to ensue; and equal blame belongs to those who fail in their duty through weakness of will, which is the same as saying through shrinking from toil and pain. These cases are perfectly simple and easy to distinguish. In a free hour, when our power of choice is untrammelled and when nothing prevents our being able to do what we like best, every pleasure is to be welcomed and every pain avoided. But in certain circumstances and owing to the claims of duty or the obligations of business it will frequently occur that pleasures have to be repudiated and annoyances accepted. The wise man therefore always holds in these matters to this principle of selection: he rejects pleasures to secure other greater pleasures, or else he endures pains to avoid worse pains. XXXXX.
+La ristruttrazione completa di un bagno trasforma lo spazio in un ambiente moderno e funzionale. Il progetto personalizzato include demolizione, rifacimento impianti idraulici ed elettrici, installazione di nuovo mobilio, sanitari e rubinetterie di design. Si procede con la posa di piastrelle resistenti all'umidità, illuminazione LED e ventilazione migliorata. L'intervento comprende anche l'isolamento acustico e termico. Il risultato finale è un bagno elegante, sicuro e ottimizzato nelle dimensioni, con finiture di alta qualità che garantiscono durabilità e comfort. Tempi di esecuzione contenuti con minimi disagi.

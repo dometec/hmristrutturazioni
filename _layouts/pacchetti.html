@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<!-- Carosello semplice con immagini e video -->
+<article class="relative flex size-full min-h-auto flex-col bg-white justify-between group/design-root overflow-x-hidden" 
+  style="font-family: 'Work Sans', 'Noto Sans', sans-serif; 
+  background-image: url('/images/edilizia-bg.jpg'); 
+  background-size: cover; 
+  background-position: center;">
+
+  <section  class="px-4 py-8 bg-white bg-opacity-90 min-h-auto">
+
+    <h1 style="font-size:2.2em; font-weight:700; margin-bottom:0.3em; letter-spacing:-1px; text-align:center;">
+      {{ page.title }}
+    </h1>
+    
+    <p style="font-size:1.25em; margin-bottom:1.5em; text-align:center; max-width:600px; margin-left:auto; margin-right:auto;">
+      {{ page.description }}
+      <b>NUMERI 1 SUL RAPPORTO QUALITÀ PREZZO</b>
+    </p>
+    
+    <style>
+      .pacchetti-content img {
+        border-radius: 18px;
+        border: 3px solid #0c7ff2;
+        box-shadow: 0 4px 18px #0c7ff222;
+        padding: 0;
+        background: #fff;
+        max-width: 100%;
+        display: block;
+        margin: 0 auto 18px auto;
+      }
+    </style>
+    <div class="pacchetti-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; margin-top: 2em;">
+      {{ content }}
+    </div>
+  
+  </section>
+
+</article>
+
+</script>

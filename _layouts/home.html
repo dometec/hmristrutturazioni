@@ -9,11 +9,7 @@ layout: default
     <div class="@[480px]:p-4">
       <div
         class="flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat @[480px]:gap-8 @[480px]:rounded-lg items-start justify-end px-4 pb-10 @[480px]:px-10"
-        style="background-image: linear-gradient(
-                rgba(0, 0, 0, 0.2) 0%,
-                rgba(0, 0, 0, 0.7) 50%
-              ),
-              url('https://lh3.googleusercontent.com/aida-public/AB6AXuDlEtRpJ-G6_J7bWPGCRqgjzT_LVPbLomz2-lpzN6dYc8X38IcmL1-qVYylS3YLrHR8NoZOpbCEUPWxGDkj6NT82yrTKUI_FsOLOBqEEBVOVIKIFFgLrkdmRP3pWNtmld9BjAsCvBLMQWbC_Gnm1_w791WVObEVljp8XTsIq6RrTTcj47Ef3V9Q8EporIcJ6X7Vwii1MoeD8a2snrsgCjXNrFafbYWTLqblSHzlGy5aPdGj3vHn3nusLK3YHEGOS1qgTAY5lar8-Kc');">
+        style="background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 50% ), url('/images/mainbg.jpeg');">
         <div class="flex flex-col gap-2 text-left ">
           <h1
             class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]">
@@ -137,7 +133,7 @@ layout: default
 
     {% for lavoro in site.lavori %}
       <a href="{{ lavoro.url }}" class="servizio-card">
-        <div class="flex flex-col gap-3 pb-3">
+        <div class="flex flex-col gap-3 pb-3 max-w-[500px]">
           <div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg" style="background-image: url('{{ lavoro.image }}');"></div>
           <div>
             <p class="text-[#111418] text-base font-medium leading-normal">{{ lavoro.title }}</p>
